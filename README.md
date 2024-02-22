@@ -1,0 +1,1 @@
+测试 celery redis broadcast
