@@ -7,6 +7,7 @@ from config import redis_url
 app = Celery('tasks', broker=redis_url)
 
 # 这种方式测试下来不行
+# 只能用于任务发送端
 broadcast_tasks_queue = Broadcast('broadcast_tasks')
 app.conf.task_routes = {
     'tasks.broadcast_fn': {
