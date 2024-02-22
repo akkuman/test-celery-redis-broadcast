@@ -1,3 +1,3 @@
-from tasks1 import broadcast_fn
+from tasks import broadcast_fn
 
 broadcast_fn.delay()
