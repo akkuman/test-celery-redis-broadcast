@@ -12,6 +12,7 @@ broadcast_tasks_queue = Broadcast('broadcast_tasks')
 app.conf.task_routes = {
     'tasks.broadcast_fn': {
         'queue': broadcast_tasks_queue,
+        # 如果只用于任务发送端，则下面的 exchange 和 routing_key 可以直接注释
         'exchange': broadcast_tasks_queue.exchange,
         'routing_key': 'celery'
     }
